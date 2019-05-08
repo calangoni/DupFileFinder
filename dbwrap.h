@@ -95,7 +95,7 @@ public:
         int ncols = sqlite3_column_count(this->ppStmt);
         for (int i = 0; i < ncols; i++) {
             if (columnName.compare(sqlite3_column_name(this->ppStmt, i)) == 0) {
-                return (i + 1);
+                return i;
             }
         }
         return -1;
